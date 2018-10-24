@@ -6,12 +6,22 @@
 
 function Help()
 { 
-  echo "$0 does crosscompilation of a golang package, archaive the binaries and creates file with checksum for the each archive."
-  echo "usage: $0 platforms packet filename version" 
-  echo "  - PLATFORMS. Sets OS and platforms by using regular expression to build binarie files. For instance '(windows|linux)\/(386|amd64)'."                  
-  echo "  - PACKET. The name of packet to compile. For instance 'github.com/friznerd/solrdump/cmd/solrdump'"
-  echo "  - FILENAME. The name of destination binary file. For Windows OS, '.exe' extension will be aaded automatically"
-  echo "  - VERSION. The version will be added into names of archaives of the binary files. For instance 0.1.1"
+  echo "$0 performs cross compilation of a golang package,"
+  echo "   archaive the binaries and creates file with checksum for the each archive."
+  echo
+  echo "usage: $0 PLATFORMS PACKET FILENAME VERSION" 
+  echo
+  echo "  - PLATFORMS. Sets OSes and platforms by using regular expression to build binarie files."
+  echo "    For instance '(windows|linux)\/(386|amd64)'."                  
+  echo
+  echo "  - PACKET. The name of packet to compile."
+  echo "    For instance 'github.com/friznerd/solrdump/cmd/solrdump'"
+  echo
+  echo "  - FILENAME. The name of destination binary file."
+  echo "    For Windows OS, '.exe' extension will be aaded automatically"
+  echo
+  echo "  - VERSION. The version will be added into names of archaives of the binary files."
+  echo "    For instance '0.1.1'"
 }
 
 if [ $# -lt 4 ]; then
